@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: url('8ee37d30-044e-46ec-ac0f-02a245eb45da.jpg') no-repeat center center fixed;
+  background: url('images/240f64d95fe19ccf91ecd3b6afb3bd48.jpg') no-repeat center center fixed;
   background-size: cover;
   overflow-x: hidden;
   position: relative;
@@ -13,7 +13,7 @@ body {
   top: -50px;
   width: 30px;
   height: 30px;
-  background-image: url('bunga.png'); /* Ganti dengan gambar bunga kecil yang kamu punya */
+  background-image: url('images/gmbr2.png'); /* Ganti dengan gambar bunga kecil yang kamu punya */
   background-size: contain;
   background-repeat: no-repeat;
   animation-name: fall;
