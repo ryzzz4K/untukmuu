@@ -20,4 +20,4 @@ function createFlower() {
 }
 
 // Buat bunga setiap 500ms
-setInterval(createFlower, 500);
+setInterval(createFlower, 50);
