@@ -2,11 +2,18 @@
 function createFlower() {
   const flower = document.createElement('div');
   flower.classList.add('falling-flower');
-  flower.style.left = Math.random() * window.innerWidth + 'px';
-  flower.style.animationDuration = (5 + Math.random() * 5) + 's';
-  flower.style.animationDelay = Math.random() * 10 + 's';
+  
+  // Posisi horizontal agak random tapi terbatas +/- 80px dari tengah
+  const center = window.innerWidth / 2;
+  flower.style.left = (center + (Math.random() * 160 - 80)) + 'px';
+
+  // Animasi 5s dengan delay random supaya bergantian jatuh
+  flower.style.animationDuration = '5s';
+  flower.style.animationDelay = (Math.random() * 5) + 's';
+
   document.body.appendChild(flower);
-  setTimeout(() => flower.remove(), 10000); // hapus setelah animasi
+
+  setTimeout(() => flower.remove(), 6000); // Hapus setelah animasi
 }
 
-setInterval(createFlower, 500);
+setInterval(createFlower, 700);
