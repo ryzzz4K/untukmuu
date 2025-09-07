@@ -51,29 +51,27 @@ button:hover {
 
 /* Bunga berjatuhan */.falling-flower {
   position: fixed;
-  top: -40px;
+  top: -50px;
   width: 30px;
   height: 30px;
-  background-image: url('gmbr2.png'); /* ganti dengan gambar bunga kamu */
+  background-image: url('gmbr2.png'); /* Ganti dengan gambar bunga kecil yang kamu punya */
   background-size: contain;
   background-repeat: no-repeat;
   animation-name: fall;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: linear;
   animation-iteration-count: infinite;
-  animation-duration: 5s; /* kecepatan 5 detik */
+  animation-duration: 8s; /* kecepatannya sedang */
   opacity: 0.8;
   z-index: 9999;
-  left: 50%; /* tetap di tengah, agar gak acak */
-  transform: translateX(-50%);
 }
 
 @keyframes fall {
   0% {
-    top: -40px;
+    transform: translateY(0) translateX(0);
     opacity: 0.8;
   }
   100% {
-    top: 100vh;
+    transform: translateY(100vh) translateX(50px);
     opacity: 0;
   }
 }
