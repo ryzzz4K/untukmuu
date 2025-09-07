@@ -1,78 +1,73 @@
-@keyframes moveBackground {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
 body {
   margin: 0;
-  height: 100vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #f9d8e6;
-  background: linear-gradient(270deg, #330029, #7a003c, #330029);
-  background-size: 600% 600%;
-  animation: moveBackground 1.5s ease infinite;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  padding: 0;
+  background: url('8ee37d30-044e-46ec-ac0f-02a245eb45da.jpg') no-repeat center center fixed;
+  background-size: cover;
+  overflow-x: hidden;
   position: relative;
-  text-align: center;
+  height: 100vh;
 }
 
-h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-  text-shadow: 0 0 10px purple, 0 0 20px #ff6eb4;
-}.img img {
-  width: 260px;
-  border-radius: 130px;
-  box-shadow: 0 10px 20px purple;
-  transition: transform 0.4s ease;
-  cursor: pointer;
-}.img img:hover {
-  transform: scale(1.08) rotate(5deg);
-  box-shadow: 0 20px 40px hotpink;
-}
-
-.button {
-  margin-top: 25px;
-  padding: 15px 45px;
-  background: linear-gradient(45deg, #ff3e96, #ff79b0);
-  border: none;
-  border-radius: 40px;
-  color: grey;
-  font-size: 18px;
-  font-weight: 700;
-  box-shadow: 0 8px 25px #ff4c98cc;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-}
-
-#button:hover {
-  background: linear-gradient(45deg, #ff5ea7, #ffa1c7);
-  transform: scale(1.1);
-  box-shadow: 0 12px 30px #ff7dbbcc;
-}.flower {
+/* Bunga berjatuhan */.falling-flower {
   position: fixed;
-  width: 40px;
-  height: 40px;
-  background: url('gmbr2.png') no-repeat center/contain;
-  pointer-events: none;
-  animation: fall linear forwards;
-  opacity: 0.9;
-  user-select: none;
+  top: -50px;
+  width: 30px;
+  height: 30px;
+  background-image: url('bunga.png'); /* Ganti dengan gambar bunga kecil yang kamu punya */
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 8s; /* kecepatannya sedang */
+  opacity: 0.8;
   z-index: 9999;
 }
 
 @keyframes fall {
   0% {
-    transform: translateY(-50px) rotate(0deg);
-    opacity: 1;
+    transform: translateY(0) translateX(0);
+    opacity: 0.8;
   }
   100% {
-    transform: translateY(110vh) rotate(360deg);
+    transform: translateY(100vh) translateX(50px);
     opacity: 0;
   }
 }
+
+#h1 {
+  color: #ff4d6d; /* merah pink romantis */
+  font-family: 'Brush Script MT', cursive;
+  font-size: 3em;
+  text-shadow: 2px 2px 4px #ff9aa2;
+  text-align: center;
+  margin-top: 40px;
+}.img {
+  display: block;
+  margin: 20px auto;
+  max-width: 80%;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(255, 77, 109, 0.5);
+  transition: transform 0.3s ease;
+}.img img:hover {
+  transform: scale(1.05) rotate(-2deg);
+}.button button {
+  background: linear-gradient(45deg, #ff4d6d, #ff99aa);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(255, 77, 109, 0.6);
+  cursor: pointer;
+  transition: background 0.4s ease, transform 0.2s ease;
+  margin: 0 auto;
+  display: block;
+  font-weight: bold;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}.button button:hover {
+  background: linear-gradient(45deg, #ff3370, #ff6685);
+  transform: scale(1.1);
+}.button button a {
+  color: white;
+  text-decoration: none;
+  }
