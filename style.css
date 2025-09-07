@@ -1,0 +1,78 @@
+@keyframes moveBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f9d8e6;
+  background: linear-gradient(270deg, #330029, #7a003c, #330029);
+  background-size: 600% 600%;
+  animation: moveBackground 1.5s ease infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px purple, 0 0 20px #ff6eb4;
+}.img img {
+  width: 260px;
+  border-radius: 130px;
+  box-shadow: 0 10px 20px purple;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}.img img:hover {
+  transform: scale(1.08) rotate(5deg);
+  box-shadow: 0 20px 40px hotpink;
+}
+
+.button {
+  margin-top: 25px;
+  padding: 15px 45px;
+  background: linear-gradient(45deg, #ff3e96, #ff79b0);
+  border: none;
+  border-radius: 40px;
+  color: grey;
+  font-size: 18px;
+  font-weight: 700;
+  box-shadow: 0 8px 25px #ff4c98cc;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#button:hover {
+  background: linear-gradient(45deg, #ff5ea7, #ffa1c7);
+  transform: scale(1.1);
+  box-shadow: 0 12px 30px #ff7dbbcc;
+}.flower {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background: url('gmbr2.png') no-repeat center/contain;
+  pointer-events: none;
+  animation: fall linear forwards;
+  opacity: 0.9;
+  user-select: none;
+  z-index: 9999;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-50px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
