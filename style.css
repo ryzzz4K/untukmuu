@@ -13,17 +13,25 @@ body {
 
 /* Styling h1 pas tema bucin pink gelap */
 h1 {
-  color: #ff6685;
   text-align: center;
+  margin-top: 30vh; /* sekitar 30% dari atas viewport */
+  color: #ff6685;
   font-size: 3em;
   text-shadow: 2px 2px 8px #660033;
-  margin-top: 40px;
 }
 
-/* Button tema pink gelap */
+img {
+  display: block;
+  margin: 50px auto; /* jadi tengah dan kasih jarak vertikal */
+  border-radius: 50%; /* bikin bulat */
+  box-shadow: 0 0 15px 5px rgba(255, 102, 133, 0.7); /* shadow pink */
+  max-width: 200px; /* atur ukuran supaya enak */
+  height: auto;
+}
+
 button {
   display: block;
-  margin: 30px auto;
+  margin: 10% auto 0 auto; /* 10% jarak dari img di atas, dan tengah */
   background: linear-gradient(45deg, #ff4d6d, #cc0044);
   color: white;
   border: none;
@@ -34,6 +42,7 @@ button {
   box-shadow: 0 6px 12px rgba(204, 0, 68, 0.6);
   transition: background 0.4s ease, transform 0.3s ease;
   font-size: 1.1em;
+  text-align: center;
 }
 button:hover {
   background: linear-gradient(45deg, #ff7391, #e60050);
