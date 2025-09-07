@@ -1,19 +1,23 @@
-
 function createFlower() {
   const flower = document.createElement('div');
   flower.classList.add('falling-flower');
-  
-  // Posisi horizontal agak random tapi terbatas +/- 80px dari tengah
-  const center = window.innerWidth / 2;
-  flower.style.left = (center + (Math.random() * 160 - 80)) + 'px';
 
-  // Animasi 5s dengan delay random supaya bergantian jatuh
-  flower.style.animationDuration = '5s';
-  flower.style.animationDelay = (Math.random() * 5) + 's';
+  // Posisi horizontal acak
+  flower.style.left = Math.random() * window.innerWidth + 'px';
+
+  // Durasi animasi acak buat natural
+  flower.style.animationDuration = (5 + Math.random() * 5) + 's';
+
+  // Delay acak supaya gak serentak jatuh
+  flower.style.animationDelay = Math.random() * 10 + 's';
 
   document.body.appendChild(flower);
 
-  setTimeout(() => flower.remove(), 6000); // Hapus setelah animasi
+  // Hapus elemen setelah animasi selesai (8s sesuai CSS)
+  setTimeout(() => {
+    flower.remove();
+  }, 10000);
 }
 
-setInterval(createFlower, 700);
+// Buat bunga setiap 500ms
+setInterval(createFlower, 500);
