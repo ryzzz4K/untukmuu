@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url('8ee37d30-044e-46ec-ac0f-02a245eb45da.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  overflow-x: hidden;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #330029; /* fallback warna pink gelap */
+  color: #ffb6c1;
+}
+
+/* Styling h1 pas tema bucin pink gelap */
+h1 {
+  color: #ff6685;
+  text-align: center;
+  font-size: 3em;
+  text-shadow: 2px 2px 8px #660033;
+  margin-top: 40px;
+}
+
+/* Button tema pink gelap */
+button {
+  display: block;
+  margin: 30px auto;
+  background: linear-gradient(45deg, #ff4d6d, #cc0044);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(204, 0, 68, 0.6);
+  transition: background 0.4s ease, transform 0.3s ease;
+  font-size: 1.1em;
+}
+button:hover {
+  background: linear-gradient(45deg, #ff7391, #e60050);
+  transform: scale(1.1);
+}
+
+/* Bunga berjatuhan */.falling-flower {
+  position: fixed;
+  top: -40px;
+  width: 30px;
+  height: 30px;
+  background-image: url('bunga.png'); /* ganti dengan gambar bunga kamu */
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation-name: fall;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 5s; /* kecepatan 5 detik */
+  opacity: 0.8;
+  z-index: 9999;
+  left: 50%; /* tetap di tengah, agar gak acak */
+  transform: translateX(-50%);
+}
+
+@keyframes fall {
+  0% {
+    top: -40px;
+    opacity: 0.8;
+  }
+  100% {
+    top: 100vh;
+    opacity: 0;
+  }
+}
